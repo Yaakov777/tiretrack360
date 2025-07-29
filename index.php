@@ -619,7 +619,7 @@
                         <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">+500</h3>
                         <p style="font-size: 1.2rem; margin-bottom: 30px;">Empresas confían en nosotros</p>
 
-                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">$2.3M</h3>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">S/2.3M</h3>
                         <p style="font-size: 1.2rem; margin-bottom: 30px;">Ahorrados por nuestros clientes</p>
 
                         <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">98%</h3>
@@ -640,7 +640,7 @@
             <div class="pricing-cards">
                 <div class="pricing-card">
                     <h3>Starter</h3>
-                    <div class="price">$299<span class="price-period">/mes</span></div>
+                    <div class="price">S/299<span class="price-period">/mes</span></div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
                         <li style="margin: 10px 0;"><i class="fas fa-check"
                                 style="color: #10b981; margin-right: 10px;"></i>Hasta 5 equipos</li>
@@ -657,7 +657,7 @@
 
                 <div class="pricing-card featured">
                     <h3>Professional</h3>
-                    <div class="price">$599<span class="price-period">/mes</span></div>
+                    <div class="price">S/599<span class="price-period">/mes</span></div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
                         <li style="margin: 10px 0;"><i class="fas fa-check"
                                 style="color: #10b981; margin-right: 10px;"></i>Hasta 25 equipos</li>
@@ -676,7 +676,7 @@
 
                 <div class="pricing-card">
                     <h3>Enterprise</h3>
-                    <div class="price">$1,299<span class="price-period">/mes</span></div>
+                    <div class="price">S/1,299<span class="price-period">/mes</span></div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
                         <li style="margin: 10px 0;"><i class="fas fa-check"
                                 style="color: #10b981; margin-right: 10px;"></i>Equipos ilimitados</li>
