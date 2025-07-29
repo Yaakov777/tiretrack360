@@ -22,6 +22,7 @@ try {
                n.codigo_interno, n.numero_serie, n.dot, n.costo_nuevo,
                n.garantia_horas, n.vida_util_horas, n.nuevo_usado,
                e.codigo as equipo_codigo, e.nombre as equipo_nombre, e.tipo as equipo_tipo,
+               i.posicion,
                m.nombre as marca_nombre, d.nombre as diseno_nombre, med.medida as medida_nombre,
                i.fecha_instalacion, i.cocada_inicial, i.observaciones as observaciones_instalacion,
                DATEDIFF(CURDATE(), a.fecha_alerta) as dias_desde_alerta,

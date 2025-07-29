@@ -148,164 +148,120 @@ $estadisticas = $stmt->fetch();
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-        .sidebar {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        }
+    .sidebar {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
 
-        .sidebar .nav-link {
-            color: #ecf0f1;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            margin: 0.25rem 0;
-            transition: all 0.3s ease;
-        }
+    .sidebar .nav-link {
+        color: #ecf0f1;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        margin: 0.25rem 0;
+        transition: all 0.3s ease;
+    }
 
-        .sidebar .nav-link:hover,
-        .sidebar .nav-link.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-        }
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
 
-        .main-content {
-            background-color: #f8f9fa;
-            min-height: 100vh;
-        }
+    .main-content {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+    }
 
-        .card {
-            border: none;
-            border-radius: 1rem;
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-        }
+    .card {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
 
-        .search-box {
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-        }
+    .search-box {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
 
-        .table-responsive {
-            border-radius: 1rem;
-            overflow: hidden;
-        }
+    .table-responsive {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
 
-        .btn-action {
-            padding: 0.25rem 0.5rem;
-            font-size: 0.875rem;
-        }
+    .btn-action {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
 
-        .equipo-card {
-            transition: transform 0.2s ease;
-            cursor: pointer;
-        }
+    .equipo-card {
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
 
-        .equipo-card:hover {
-            transform: translateY(-2px);
-        }
+    .equipo-card:hover {
+        transform: translateY(-2px);
+    }
 
-        .stat-card {
-            border: none;
-            border-radius: 1rem;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+    .stat-card {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
+    .stat-card:hover {
+        transform: translateY(-5px);
+    }
 
-        .equipo-status {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
+    .equipo-status {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 
-        .neumaticos-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 10px;
-        }
+    .neumaticos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
 
-        .neumatico-pos {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 8px;
-            padding: 8px;
-            text-align: center;
-            font-size: 0.8em;
-        }
+    .neumatico-pos {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        font-size: 0.8em;
+    }
 
-        .neumatico-pos.installed {
-            background: #d1ecf1;
-            border-color: #bee5eb;
-            color: #0c5460;
-        }
+    .neumatico-pos.installed {
+        background: #d1ecf1;
+        border-color: #bee5eb;
+        color: #0c5460;
+    }
 
-        .neumatico-pos.warning {
-            background: #fff3cd;
-            border-color: #ffeaa7;
-            color: #856404;
-        }
+    .neumatico-pos.warning {
+        background: #fff3cd;
+        border-color: #ffeaa7;
+        color: #856404;
+    }
 
-        .neumatico-pos.danger {
-            background: #f8d7da;
-            border-color: #f5c6cb;
-            color: #721c24;
-        }
+    .neumatico-pos.danger {
+        background: #f8d7da;
+        border-color: #f5c6cb;
+        color: #721c24;
+    }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-2 d-md-block sidebar p-3">
-                <div class="text-center mb-4">
-                    <h4 class="text-white">
-                        <i class="bi bi-gear-wide"></i> TireSystem
-                    </h4>
-                </div>
 
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            <i class="bi bi-speedometer2"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="neumaticos.php">
-                            <i class="bi bi-circle"></i> Neumáticos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="equipos.php">
-                            <i class="bi bi-truck"></i> Equipos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="instalaciones.php">
-                            <i class="bi bi-arrow-repeat"></i> Instalaciones
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="seguimiento.php">
-                            <i class="bi bi-graph-up"></i> Seguimiento
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="alertas.php">
-                            <i class="bi bi-exclamation-triangle"></i> Alertas
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reportes.php">
-                            <i class="bi bi-file-text"></i> Reportes
-                        </a>
-                    </li>
-                </ul>
-            </nav>
 
+            <?php include 'sidebar.php'; ?>
             <!-- Main Content -->
             <main class="col-md-10 ms-sm-auto main-content p-4">
                 <!-- Header -->
@@ -314,7 +270,8 @@ $estadisticas = $stmt->fetch();
                         <i class="bi bi-truck text-primary"></i> Gestión de Equipos
                     </h1>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#equipoModal">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#equipoModal">
                             <i class="bi bi-plus-lg"></i> Nuevo Equipo
                         </button>
                         <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
@@ -340,17 +297,17 @@ $estadisticas = $stmt->fetch();
 
                 <!-- Alertas -->
                 <?php if (isset($success)): ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="bi bi-check-circle"></i> <?= $success ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="bi bi-check-circle"></i> <?= $success ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <?php endif; ?>
 
                 <?php if (isset($error)): ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <i class="bi bi-exclamation-triangle"></i> <?= $error ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="bi bi-exclamation-triangle"></i> <?= $error ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <?php endif; ?>
 
                 <!-- Estadísticas principales -->
@@ -438,10 +395,10 @@ $estadisticas = $stmt->fetch();
                                 <select class="form-select" name="tipo">
                                     <option value="">Todos los tipos</option>
                                     <?php foreach ($tipos_equipo as $tipo): ?>
-                                        <option value="<?= htmlspecialchars($tipo) ?>"
-                                            <?= ($_GET['tipo'] ?? '') == $tipo ? 'selected' : '' ?>>
-                                            <?= htmlspecialchars($tipo) ?>
-                                        </option>
+                                    <option value="<?= htmlspecialchars($tipo) ?>"
+                                        <?= ($_GET['tipo'] ?? '') == $tipo ? 'selected' : '' ?>>
+                                        <?= htmlspecialchars($tipo) ?>
+                                    </option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -473,63 +430,66 @@ $estadisticas = $stmt->fetch();
                 <!-- Vista en tarjetas de equipos -->
                 <div class="row">
                     <?php if (empty($equipos)): ?>
-                        <div class="col-12 text-center py-5">
-                            <i class="bi bi-inbox h1 text-muted"></i>
-                            <h4 class="text-muted">No se encontraron equipos</h4>
-                            <p class="text-muted">Intente ajustar los filtros de búsqueda</p>
-                        </div>
+                    <div class="col-12 text-center py-5">
+                        <i class="bi bi-inbox h1 text-muted"></i>
+                        <h4 class="text-muted">No se encontraron equipos</h4>
+                        <p class="text-muted">Intente ajustar los filtros de búsqueda</p>
+                    </div>
                     <?php else: ?>
-                        <?php foreach ($equipos as $equipo): ?>
-                            <div class="col-xl-4 col-lg-6 mb-4">
-                                <div class="card equipo-card h-100" onclick="verDetalleEquipo(<?= $equipo['id'] ?>)">
-                                    <div class="card-body position-relative">
-                                        <!-- Estado del equipo -->
-                                        <div class="equipo-status">
-                                            <span class="badge bg-<?= $equipo['activo'] ? 'success' : 'secondary' ?>">
-                                                <?= $equipo['activo'] ? 'Activo' : 'Inactivo' ?>
-                                            </span>
-                                        </div>
+                    <?php foreach ($equipos as $equipo): ?>
+                    <div class="col-xl-4 col-lg-6 mb-4">
+                        <div class="card equipo-card h-100" onclick="verDetalleEquipo(<?= $equipo['id'] ?>)">
+                            <div class="card-body position-relative">
+                                <!-- Estado del equipo -->
+                                <div class="equipo-status">
+                                    <span class="badge bg-<?= $equipo['activo'] ? 'success' : 'secondary' ?>">
+                                        <?= $equipo['activo'] ? 'Activo' : 'Inactivo' ?>
+                                    </span>
+                                </div>
 
-                                        <!-- Información principal -->
-                                        <div class="mb-3">
-                                            <h5 class="card-title mb-1">
-                                                <i class="bi bi-truck text-primary"></i>
-                                                <?= htmlspecialchars($equipo['codigo']) ?>
-                                            </h5>
-                                            <h6 class="text-muted mb-2"><?= htmlspecialchars($equipo['nombre']) ?></h6>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="badge bg-info"><?= htmlspecialchars($equipo['tipo']) ?></span>
-                                                <small class="text-muted"><?= htmlspecialchars($equipo['modelo']) ?></small>
-                                            </div>
-                                        </div>
+                                <!-- Información principal -->
+                                <div class="mb-3">
+                                    <h5 class="card-title mb-1">
+                                        <i class="bi bi-truck text-primary"></i>
+                                        <?= htmlspecialchars($equipo['codigo']) ?>
+                                    </h5>
+                                    <h6 class="text-muted mb-2"><?= htmlspecialchars($equipo['nombre']) ?></h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-info"><?= htmlspecialchars($equipo['tipo']) ?></span>
+                                        <small class="text-muted"><?= htmlspecialchars($equipo['modelo']) ?></small>
+                                    </div>
+                                </div>
 
-                                        <!-- Estadísticas del equipo -->
-                                        <div class="row text-center mb-3">
-                                            <div class="col-4">
-                                                <div class="fw-bold text-primary"><?= $equipo['neumaticos_instalados'] ?></div>
-                                                <small class="text-muted">Neumáticos</small>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="fw-bold text-success"><?= number_format($equipo['horas_mes_promedio']) ?></div>
-                                                <small class="text-muted">Hrs/Mes</small>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="fw-bold text-warning"><?= number_format($equipo['desgaste_promedio'], 1) ?>%</div>
-                                                <small class="text-muted">Desgaste</small>
-                                            </div>
-                                        </div>
+                                <!-- Estadísticas del equipo -->
+                                <div class="row text-center mb-3">
+                                    <div class="col-4">
+                                        <div class="fw-bold text-primary"><?= $equipo['neumaticos_instalados'] ?></div>
+                                        <small class="text-muted">Neumáticos</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="fw-bold text-success">
+                                            <?= number_format($equipo['horas_mes_promedio']) ?></div>
+                                        <small class="text-muted">Hrs/Mes</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="fw-bold text-warning">
+                                            <?= number_format($equipo['desgaste_promedio'], 1) ?>%</div>
+                                        <small class="text-muted">Desgaste</small>
+                                    </div>
+                                </div>
 
-                                        <!-- Valor de neumáticos -->
-                                        <div class="mb-3">
-                                            <div class="d-flex justify-content-between">
-                                                <small class="text-muted">Valor Neumáticos:</small>
-                                                <strong class="text-success"><?= formatCurrency($equipo['valor_neumaticos']) ?></strong>
-                                            </div>
-                                        </div>
+                                <!-- Valor de neumáticos -->
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-muted">Valor Neumáticos:</small>
+                                        <strong
+                                            class="text-success"><?= formatCurrency($equipo['valor_neumaticos']) ?></strong>
+                                    </div>
+                                </div>
 
-                                        <!-- Grid de posiciones de neumáticos -->
-                                        <div class="neumaticos-grid" id="grid_<?= $equipo['id'] ?>">
-                                            <?php
+                                <!-- Grid de posiciones de neumáticos -->
+                                <div class="neumaticos-grid" id="grid_<?= $equipo['id'] ?>">
+                                    <?php
                                             // Simular posiciones (1-6 para camiones mineros)
                                             for ($pos = 1; $pos <= 6; $pos++):
                                                 $installed = $pos <= $equipo['neumaticos_instalados'];
@@ -537,73 +497,74 @@ $estadisticas = $stmt->fetch();
                                                 if ($installed && $equipo['desgaste_promedio'] > 70) $class = 'danger';
                                                 elseif ($installed && $equipo['desgaste_promedio'] > 30) $class = 'warning';
                                             ?>
-                                                <div class="neumatico-pos <?= $class ?>">
-                                                    <div class="fw-bold"><?= $pos ?></div>
-                                                    <div style="font-size: 0.7em;">
-                                                        <?= $installed ? 'INST' : 'LIBRE' ?>
-                                                    </div>
-                                                </div>
-                                            <?php endfor; ?>
+                                    <div class="neumatico-pos <?= $class ?>">
+                                        <div class="fw-bold"><?= $pos ?></div>
+                                        <div style="font-size: 0.7em;">
+                                            <?= $installed ? 'INST' : 'LIBRE' ?>
                                         </div>
                                     </div>
-
-                                    <!-- Acciones -->
-                                    <div class="card-footer bg-transparent">
-                                        <div class="btn-group w-100" role="group">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="event.stopPropagation(); editEquipo(<?= htmlspecialchars(json_encode($equipo)) ?>)">
-                                                <i class="bi bi-pencil"></i> Editar
-                                            </button>
-                                            <button type="button" class="btn btn-outline-<?= $equipo['activo'] ? 'warning' : 'success' ?> btn-sm"
-                                                onclick="event.stopPropagation(); toggleEstado(<?= $equipo['id'] ?>, <?= $equipo['activo'] ? 'false' : 'true' ?>)">
-                                                <i class="bi bi-<?= $equipo['activo'] ? 'pause' : 'play' ?>-circle"></i>
-                                                <?= $equipo['activo'] ? 'Desactivar' : 'Activar' ?>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-info btn-sm"
-                                                onclick="event.stopPropagation(); verSeguimiento(<?= $equipo['id'] ?>)">
-                                                <i class="bi bi-graph-up"></i> Seguimiento
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <?php endfor; ?>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+
+                            <!-- Acciones -->
+                            <div class="card-footer bg-transparent">
+                                <div class="btn-group w-100" role="group">
+                                    <button type="button" class="btn btn-outline-primary btn-sm"
+                                        onclick="event.stopPropagation(); editEquipo(<?= htmlspecialchars(json_encode($equipo)) ?>)">
+                                        <i class="bi bi-pencil"></i> Editar
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-outline-<?= $equipo['activo'] ? 'warning' : 'success' ?> btn-sm"
+                                        onclick="event.stopPropagation(); toggleEstado(<?= $equipo['id'] ?>, <?= $equipo['activo'] ? 'false' : 'true' ?>)">
+                                        <i class="bi bi-<?= $equipo['activo'] ? 'pause' : 'play' ?>-circle"></i>
+                                        <?= $equipo['activo'] ? 'Desactivar' : 'Activar' ?>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-info btn-sm"
+                                        onclick="event.stopPropagation(); verSeguimiento(<?= $equipo['id'] ?>)">
+                                        <i class="bi bi-graph-up"></i> Seguimiento
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                     <?php endif; ?>
                 </div>
 
                 <!-- Paginación -->
                 <?php if ($total_pages > 1): ?>
-                    <div class="d-flex justify-content-center mt-4">
-                        <nav aria-label="Paginación de equipos">
-                            <ul class="pagination">
-                                <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
-                                    <a class="page-link" href="?page=<?= $page - 1 ?>&<?= http_build_query(array_filter($_GET, function ($k) {
+                <div class="d-flex justify-content-center mt-4">
+                    <nav aria-label="Paginación de equipos">
+                        <ul class="pagination">
+                            <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
+                                <a class="page-link" href="?page=<?= $page - 1 ?>&<?= http_build_query(array_filter($_GET, function ($k) {
                                                                                             return $k != 'page';
                                                                                         }, ARRAY_FILTER_USE_KEY)) ?>">
-                                        <i class="bi bi-chevron-left"></i>
-                                    </a>
-                                </li>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
 
-                                <?php for ($i = max(1, $page - 2); $i <= min($total_pages, $page + 2); $i++): ?>
-                                    <li class="page-item <?= $i == $page ? 'active' : '' ?>">
-                                        <a class="page-link" href="?page=<?= $i ?>&<?= http_build_query(array_filter($_GET, function ($k) {
+                            <?php for ($i = max(1, $page - 2); $i <= min($total_pages, $page + 2); $i++): ?>
+                            <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                                <a class="page-link" href="?page=<?= $i ?>&<?= http_build_query(array_filter($_GET, function ($k) {
                                                                                         return $k != 'page';
                                                                                     }, ARRAY_FILTER_USE_KEY)) ?>">
-                                            <?= $i ?>
-                                        </a>
-                                    </li>
-                                <?php endfor; ?>
+                                    <?= $i ?>
+                                </a>
+                            </li>
+                            <?php endfor; ?>
 
-                                <li class="page-item <?= $page >= $total_pages ? 'disabled' : '' ?>">
-                                    <a class="page-link" href="?page=<?= $page + 1 ?>&<?= http_build_query(array_filter($_GET, function ($k) {
+                            <li class="page-item <?= $page >= $total_pages ? 'disabled' : '' ?>">
+                                <a class="page-link" href="?page=<?= $page + 1 ?>&<?= http_build_query(array_filter($_GET, function ($k) {
                                                                                             return $k != 'page';
                                                                                         }, ARRAY_FILTER_USE_KEY)) ?>">
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <?php endif; ?>
             </main>
         </div>
@@ -689,7 +650,8 @@ $estadisticas = $stmt->fetch();
                             <div class="col-12">
                                 <div class="alert alert-info">
                                     <h6><i class="bi bi-info-circle"></i> Configuración de Posiciones</h6>
-                                    <p class="mb-2">Este sistema maneja equipos con las siguientes configuraciones típicas:</p>
+                                    <p class="mb-2">Este sistema maneja equipos con las siguientes configuraciones
+                                        típicas:</p>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <strong>Camiones Mineros:</strong><br>
@@ -757,262 +719,263 @@ $estadisticas = $stmt->fetch();
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script>
-        let equipoSeleccionado = null;
+    let equipoSeleccionado = null;
 
-        $(document).ready(function() {
-            // Auto-dismiss alerts
-            setTimeout(function() {
-                $('.alert').alert('close');
-            }, 5000);
+    $(document).ready(function() {
+        // Auto-dismiss alerts
+        setTimeout(function() {
+            $('.alert').alert('close');
+        }, 5000);
 
-            // Calcular información al cambiar horas
-            $('#horas_mes_promedio').on('input', calcularInfo);
-            calcularInfo(); // Calcular al cargar
-        });
+        // Calcular información al cambiar horas
+        $('#horas_mes_promedio').on('input', calcularInfo);
+        calcularInfo(); // Calcular al cargar
+    });
 
-        function calcularInfo() {
-            const horasMes = parseFloat($('#horas_mes_promedio').val()) || 0;
-            const horasDia = (horasMes / 30).toFixed(1);
-            const diasMes = Math.ceil(horasMes / 20); // Asumiendo 20 hrs/día efectivas
-            const utilizacion = ((horasMes / 744) * 100).toFixed(1); // 744 = 24 * 31 hrs máximas
+    function calcularInfo() {
+        const horasMes = parseFloat($('#horas_mes_promedio').val()) || 0;
+        const horasDia = (horasMes / 30).toFixed(1);
+        const diasMes = Math.ceil(horasMes / 20); // Asumiendo 20 hrs/día efectivas
+        const utilizacion = ((horasMes / 744) * 100).toFixed(1); // 744 = 24 * 31 hrs máximas
 
-            $('#horasDia').text(horasDia + ' hrs');
-            $('#diasMes').text(diasMes + ' días');
-            $('#utilizacion').text(utilizacion + '%');
-        }
+        $('#horasDia').text(horasDia + ' hrs');
+        $('#diasMes').text(diasMes + ' días');
+        $('#utilizacion').text(utilizacion + '%');
+    }
 
-        function editEquipo(equipo) {
-            $('#formAction').val('update');
-            $('#equipoId').val(equipo.id);
-            $('#modalTitle').html('<i class="bi bi-pencil"></i> Editar Equipo');
-            $('#btnText').text('Actualizar');
+    function editEquipo(equipo) {
+        $('#formAction').val('update');
+        $('#equipoId').val(equipo.id);
+        $('#modalTitle').html('<i class="bi bi-pencil"></i> Editar Equipo');
+        $('#btnText').text('Actualizar');
 
-            // Llenar formulario
-            $('#codigo').val(equipo.codigo);
-            $('#nombre').val(equipo.nombre);
-            $('#tipo').val(equipo.tipo);
-            $('#modelo').val(equipo.modelo);
-            $('#horas_mes_promedio').val(equipo.horas_mes_promedio);
+        // Llenar formulario
+        $('#codigo').val(equipo.codigo);
+        $('#nombre').val(equipo.nombre);
+        $('#tipo').val(equipo.tipo);
+        $('#modelo').val(equipo.modelo);
+        $('#horas_mes_promedio').val(equipo.horas_mes_promedio);
 
-            calcularInfo();
-            $('#equipoModal').modal('show');
-        }
+        calcularInfo();
+        $('#equipoModal').modal('show');
+    }
 
-        function resetForm() {
-            $('#formAction').val('create');
-            $('#equipoId').val('');
-            $('#modalTitle').html('<i class="bi bi-plus-circle"></i> Nuevo Equipo');
-            $('#btnText').text('Guardar');
-            $('#equipoForm')[0].reset();
-            $('#horas_mes_promedio').val('500');
-            calcularInfo();
-        }
+    function resetForm() {
+        $('#formAction').val('create');
+        $('#equipoId').val('');
+        $('#modalTitle').html('<i class="bi bi-plus-circle"></i> Nuevo Equipo');
+        $('#btnText').text('Guardar');
+        $('#equipoForm')[0].reset();
+        $('#horas_mes_promedio').val('500');
+        calcularInfo();
+    }
 
-        // Reset form when modal is hidden
-        $('#equipoModal').on('hidden.bs.modal', function() {
-            resetForm();
-        });
+    // Reset form when modal is hidden
+    $('#equipoModal').on('hidden.bs.modal', function() {
+        resetForm();
+    });
 
-        function toggleEstado(equipoId, nuevoEstado) {
-            const accion = nuevoEstado ? 'activar' : 'desactivar';
-            const mensaje = `¿Está seguro de que desea ${accion} este equipo?`;
+    function toggleEstado(equipoId, nuevoEstado) {
+        const accion = nuevoEstado ? 'activar' : 'desactivar';
+        const mensaje = `¿Está seguro de que desea ${accion} este equipo?`;
 
-            if (confirm(mensaje)) {
-                $.ajax({
-                    url: 'equipos.php',
-                    method: 'POST',
-                    data: {
-                        action: 'toggle_status',
-                        id: equipoId
-                    },
-                    success: function(response) {
-                        location.reload();
-                    },
-                    error: function() {
-                        alert('Error al cambiar el estado del equipo');
-                    }
-                });
-            }
-        }
-
-        function verDetalleEquipo(equipoId) {
-            equipoSeleccionado = equipoId;
-            $('#detalleModal').modal('show');
-
-            // Cargar detalle del equipo
+        if (confirm(mensaje)) {
             $.ajax({
-                url: 'api/equipo_detalle.php',
-                method: 'GET',
+                url: 'equipos.php',
+                method: 'POST',
                 data: {
+                    action: 'toggle_status',
                     id: equipoId
                 },
                 success: function(response) {
-                    $('#detalleContent').html(response);
+                    location.reload();
                 },
                 error: function() {
-                    $('#detalleContent').html(`
+                    alert('Error al cambiar el estado del equipo');
+                }
+            });
+        }
+    }
+
+    function verDetalleEquipo(equipoId) {
+        equipoSeleccionado = equipoId;
+        $('#detalleModal').modal('show');
+
+        // Cargar detalle del equipo
+        $.ajax({
+            url: 'api/equipo_detalle.php',
+            method: 'GET',
+            data: {
+                id: equipoId
+            },
+            success: function(response) {
+                $('#detalleContent').html(response);
+            },
+            error: function() {
+                $('#detalleContent').html(`
                         <div class="alert alert-danger">
                             <i class="bi bi-exclamation-triangle"></i>
                             Error al cargar el detalle del equipo
                         </div>
                     `);
-                }
-            });
-        }
-
-        function verSeguimiento(equipoId) {
-            window.location.href = `seguimiento.php?equipo=${equipoId}`;
-        }
-
-        function irASeguimiento() {
-            if (equipoSeleccionado) {
-                window.location.href = `seguimiento.php?equipo=${equipoSeleccionado}`;
-            }
-        }
-
-        // Form validation
-        $('#equipoForm').on('submit', function(e) {
-            const codigo = $('#codigo').val().trim();
-            const nombre = $('#nombre').val().trim();
-            const tipo = $('#tipo').val();
-            const horas = $('#horas_mes_promedio').val();
-
-            if (!codigo || !nombre || !tipo) {
-                e.preventDefault();
-                alert('Por favor complete todos los campos obligatorios (*)');
-                return false;
-            }
-
-            if (parseFloat(horas) <= 0 || parseFloat(horas) > 744) {
-                e.preventDefault();
-                alert('Las horas por mes deben estar entre 1 y 744');
-                return false;
-            }
-
-            // Show loading state
-            $(this).find('button[type="submit"]').html('<i class="bi bi-hourglass-split"></i> Guardando...').prop('disabled', true);
-        });
-
-        // Auto-uppercase codigo
-        $('#codigo').on('input', function() {
-            $(this).val($(this).val().toUpperCase());
-        });
-
-        // Search on enter
-        $('input[name="search"]').on('keypress', function(e) {
-            if (e.which === 13) {
-                $(this).closest('form').submit();
             }
         });
+    }
 
-        // Funciones de exportación
-        function exportarDatos(formato) {
-            const params = new URLSearchParams(window.location.search);
-            params.append('export', formato);
-            window.location.href = `api/exportar_equipos.php?${params.toString()}`;
+    function verSeguimiento(equipoId) {
+        window.location.href = `seguimiento.php?equipo=${equipoId}`;
+    }
+
+    function irASeguimiento() {
+        if (equipoSeleccionado) {
+            window.location.href = `seguimiento.php?equipo=${equipoSeleccionado}`;
+        }
+    }
+
+    // Form validation
+    $('#equipoForm').on('submit', function(e) {
+        const codigo = $('#codigo').val().trim();
+        const nombre = $('#nombre').val().trim();
+        const tipo = $('#tipo').val();
+        const horas = $('#horas_mes_promedio').val();
+
+        if (!codigo || !nombre || !tipo) {
+            e.preventDefault();
+            alert('Por favor complete todos los campos obligatorios (*)');
+            return false;
         }
 
-        function importarDatos() {
-            // Crear input file dinámicamente
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = '.xlsx,.xls,.csv';
-            input.onchange = function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    const formData = new FormData();
-                    formData.append('file', file);
+        if (parseFloat(horas) <= 0 || parseFloat(horas) > 744) {
+            e.preventDefault();
+            alert('Las horas por mes deben estar entre 1 y 744');
+            return false;
+        }
 
-                    $.ajax({
-                        url: 'api/importar_equipos.php',
-                        method: 'POST',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function(response) {
-                            if (response.success) {
-                                alert('Datos importados exitosamente');
-                                location.reload();
-                            } else {
-                                alert('Error: ' + response.message);
-                            }
-                        },
-                        error: function() {
-                            alert('Error al importar los datos');
+        // Show loading state
+        $(this).find('button[type="submit"]').html('<i class="bi bi-hourglass-split"></i> Guardando...').prop(
+            'disabled', true);
+    });
+
+    // Auto-uppercase codigo
+    $('#codigo').on('input', function() {
+        $(this).val($(this).val().toUpperCase());
+    });
+
+    // Search on enter
+    $('input[name="search"]').on('keypress', function(e) {
+        if (e.which === 13) {
+            $(this).closest('form').submit();
+        }
+    });
+
+    // Funciones de exportación
+    function exportarDatos(formato) {
+        const params = new URLSearchParams(window.location.search);
+        params.append('export', formato);
+        window.location.href = `api/exportar_equipos.php?${params.toString()}`;
+    }
+
+    function importarDatos() {
+        // Crear input file dinámicamente
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.xlsx,.xls,.csv';
+        input.onchange = function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                $.ajax({
+                    url: 'api/importar_equipos.php',
+                    method: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        if (response.success) {
+                            alert('Datos importados exitosamente');
+                            location.reload();
+                        } else {
+                            alert('Error: ' + response.message);
                         }
-                    });
-                }
-            };
-            input.click();
-        }
+                    },
+                    error: function() {
+                        alert('Error al importar los datos');
+                    }
+                });
+            }
+        };
+        input.click();
+    }
 
-        // Tooltip initialization
-        $(function() {
-            $('[data-bs-toggle="tooltip"]').tooltip();
-        });
+    // Tooltip initialization
+    $(function() {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
 
-        // Animación de las tarjetas
-        $('.equipo-card').each(function(index) {
-            $(this).css('animation-delay', (index * 100) + 'ms');
-        });
+    // Animación de las tarjetas
+    $('.equipo-card').each(function(index) {
+        $(this).css('animation-delay', (index * 100) + 'ms');
+    });
     </script>
 
     <style>
-        /* Animaciones para las tarjetas */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .equipo-card {
-            animation: fadeInUp 0.6s ease forwards;
+    /* Animaciones para las tarjetas */
+    @keyframes fadeInUp {
+        from {
             opacity: 0;
+            transform: translateY(20px);
         }
 
-        /* Hover effects */
-        .neumatico-pos {
-            transition: all 0.2s ease;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
+    }
 
-        .neumatico-pos:hover {
-            transform: scale(1.05);
-        }
+    .equipo-card {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
 
-        /* Loading states */
-        .btn:disabled {
-            opacity: 0.7;
-        }
+    /* Hover effects */
+    .neumatico-pos {
+        transition: all 0.2s ease;
+    }
 
-        /* Custom scrollbar for modal */
-        .modal-body {
-            max-height: 70vh;
-            overflow-y: auto;
-        }
+    .neumatico-pos:hover {
+        transform: scale(1.05);
+    }
 
-        .modal-body::-webkit-scrollbar {
-            width: 6px;
-        }
+    /* Loading states */
+    .btn:disabled {
+        opacity: 0.7;
+    }
 
-        .modal-body::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
+    /* Custom scrollbar for modal */
+    .modal-body {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
 
-        .modal-body::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
+    .modal-body::-webkit-scrollbar {
+        width: 6px;
+    }
 
-        .modal-body::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+    .modal-body::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
     </style>
 </body>
 

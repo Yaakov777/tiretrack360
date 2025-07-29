@@ -187,53 +187,8 @@ if ($equipo_seleccionado) {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-2 d-md-block sidebar p-3">
-                <div class="text-center mb-4">
-                    <h4 class="text-white">
-                        <i class="bi bi-gear-wide"></i> TireSystem
-                    </h4>
-                </div>
 
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            <i class="bi bi-speedometer2"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="neumaticos.php">
-                            <i class="bi bi-circle"></i> Neumáticos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="equipos.php">
-                            <i class="bi bi-truck"></i> Equipos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="instalaciones.php">
-                            <i class="bi bi-arrow-repeat"></i> Instalaciones
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="seguimiento.php">
-                            <i class="bi bi-graph-up"></i> Seguimiento
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="alertas.php">
-                            <i class="bi bi-exclamation-triangle"></i> Alertas
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reportes.php">
-                            <i class="bi bi-file-text"></i> Reportes
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
+            <?php include 'sidebar.php'; ?>
             <!-- Main Content -->
             <main class="col-md-10 ms-sm-auto main-content p-4">
                 <!-- Header -->

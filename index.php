@@ -1,4 +1,9 @@
 <?php
+
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once 'config.php';
 Auth::requireLogin();
 
@@ -96,6 +101,9 @@ $rendimiento_marcas = $stmt->fetchAll();
     <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap 5 CDN -->
+
+
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -157,77 +165,10 @@ $rendimiento_marcas = $stmt->fetchAll();
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-2 d-md-block sidebar p-3">
-                <div class="text-center mb-4">
-                    <h4 class="text-white">
-                        <i class="bi bi-gear-wide"></i> TireSystem
-                    </h4>
-                    <small class="text-light">v1.0</small>
-                </div>
 
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.php">
-                            <i class="bi bi-speedometer2"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="neumaticos.php">
-                            <i class="bi bi-circle"></i> Neumáticos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="equipos.php">
-                            <i class="bi bi-truck"></i> Equipos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="instalaciones.php">
-                            <i class="bi bi-arrow-repeat"></i> Instalaciones
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="seguimiento.php">
-                            <i class="bi bi-graph-up"></i> Seguimiento
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="alertas.php">
-                            <i class="bi bi-exclamation-triangle"></i> Alertas
-                            <?php if ($stats['alertas_pendientes'] > 0): ?>
-                            <span class="badge bg-danger"><?= $stats['alertas_pendientes'] ?></span>
-                            <?php endif; ?>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reportes2.php">
-                            <i class="bi bi-file-text"></i> Reportes
-                        </a>
-                    </li>
-                    <hr class="text-light">
-                    <li class="nav-item">
-                        <a class="nav-link" href="configuracion.php">
-                            <i class="bi bi-gear"></i> Configuración
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">
-                            <i class="bi bi-box-arrow-right"></i> Salir
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="mt-auto text-center text-light">
-                    <small>
-                        Usuario: <?= $_SESSION['user_name'] ?><br>
-                        Rol: <?= ucfirst($_SESSION['user_role']) ?>
-                    </small>
-                </div>
-            </nav>
-
+            <?php include 'sidebar.php'; ?>
             <!-- Main Content -->
-            <main class="col-md-10 ms-sm-auto main-content p-4">
+            <main id="mainContent" class="col main-content p-4">
                 <!-- Header -->
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h1 class="h2">Dashboard</h1>

@@ -40,57 +40,57 @@ if ($_POST) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
 
-        .login-container {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 1rem;
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-        }
+    .login-container {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1rem;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    }
 
-        .login-header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            border-radius: 1rem 1rem 0 0;
-        }
+    .login-header {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+        border-radius: 1rem 1rem 0 0;
+    }
 
-        .form-control:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-        }
+    .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    }
 
-        .btn-login {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            color: white;
-            transition: transform 0.2s ease;
-        }
+    .btn-login {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        color: white;
+        transition: transform 0.2s ease;
+    }
 
-        .btn-login:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-            color: white;
-        }
+    .btn-login:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        color: white;
+    }
 
-        .system-info {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
+    .system-info {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
 
-        .demo-credentials {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            padding: 0.75rem;
-            margin-top: 1rem;
-        }
+    .demo-credentials {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        margin-top: 1rem;
+    }
     </style>
 </head>
 
@@ -107,11 +107,11 @@ if ($_POST) {
 
                     <div class="p-4">
                         <?php if ($error): ?>
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <i class="bi bi-exclamation-triangle"></i>
-                                <?= htmlspecialchars($error) ?>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-triangle"></i>
+                            <?= htmlspecialchars($error) ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
                         <?php endif; ?>
 
                         <form method="POST" id="loginForm">
@@ -186,56 +186,57 @@ if ($_POST) {
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            // Toggle password visibility
-            $('#togglePassword').click(function() {
-                const passwordField = $('#password');
-                const passwordFieldType = passwordField.attr('type');
-                const icon = $(this).find('i');
+    $(document).ready(function() {
+        // Toggle password visibility
+        $('#togglePassword').click(function() {
+            const passwordField = $('#password');
+            const passwordFieldType = passwordField.attr('type');
+            const icon = $(this).find('i');
 
-                if (passwordFieldType === 'password') {
-                    passwordField.attr('type', 'text');
-                    icon.removeClass('bi-eye').addClass('bi-eye-slash');
-                } else {
-                    passwordField.attr('type', 'password');
-                    icon.removeClass('bi-eye-slash').addClass('bi-eye');
-                }
-            });
-
-            // Auto-fill demo credentials
-            $('.demo-credentials').on('click', function() {
-                $('#email').val('admin@sistema.com');
-                $('#password').val('password');
-            });
-
-            // Form validation and submission
-            $('#loginForm').on('submit', function(e) {
-                const email = $('#email').val().trim();
-                const password = $('#password').val();
-
-                if (!email || !password) {
-                    e.preventDefault();
-                    showAlert('Por favor complete todos los campos', 'warning');
-                    return false;
-                }
-
-                // Show loading state
-                $('#btnLogin').html('<i class="bi bi-hourglass-split"></i> Iniciando...').prop('disabled', true);
-            });
-
-            // Focus on first field
-            $('#email').focus();
-
-            // Enter key navigation
-            $('#email').on('keypress', function(e) {
-                if (e.which === 13) {
-                    $('#password').focus();
-                }
-            });
+            if (passwordFieldType === 'password') {
+                passwordField.attr('type', 'text');
+                icon.removeClass('bi-eye').addClass('bi-eye-slash');
+            } else {
+                passwordField.attr('type', 'password');
+                icon.removeClass('bi-eye-slash').addClass('bi-eye');
+            }
         });
 
-        function showAlert(message, type = 'danger') {
-            const alertHtml = `
+        // Auto-fill demo credentials
+        $('.demo-credentials').on('click', function() {
+            $('#email').val('admin@sistema.com');
+            $('#password').val('password');
+        });
+
+        // Form validation and submission
+        $('#loginForm').on('submit', function(e) {
+            const email = $('#email').val().trim();
+            const password = $('#password').val();
+
+            if (!email || !password) {
+                e.preventDefault();
+                showAlert('Por favor complete todos los campos', 'warning');
+                return false;
+            }
+
+            // Show loading state
+            $('#btnLogin').html('<i class="bi bi-hourglass-split"></i> Iniciando...').prop('disabled',
+                true);
+        });
+
+        // Focus on first field
+        $('#email').focus();
+
+        // Enter key navigation
+        $('#email').on('keypress', function(e) {
+            if (e.which === 13) {
+                $('#password').focus();
+            }
+        });
+    });
+
+    function showAlert(message, type = 'danger') {
+        const alertHtml = `
                 <div class="alert alert-${type} alert-dismissible fade show" role="alert">
                     <i class="bi bi-exclamation-triangle"></i>
                     ${message}
@@ -243,13 +244,13 @@ if ($_POST) {
                 </div>
             `;
 
-            $('.login-container .p-4').prepend(alertHtml);
+        $('.login-container .p-4').prepend(alertHtml);
 
-            // Auto-dismiss after 5 seconds
-            setTimeout(function() {
-                $('.alert').alert('close');
-            }, 5000);
-        }
+        // Auto-dismiss after 5 seconds
+        setTimeout(function() {
+            $('.alert').alert('close');
+        }, 5000);
+    }
     </script>
 </body>
 
