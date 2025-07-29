@@ -465,7 +465,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Tire Track 360</h1>
+                    <h1>TireTrack Pro</h1>
                     <div class="subtitle">Sistema Inteligente de Gestión de Neumáticos</div>
                     <p>Optimiza costos, maximiza rendimiento y toma decisiones informadas con el sistema más avanzado
                         para el control total de tu flota de neumáticos.</p>
@@ -578,7 +578,8 @@
         <div class="container">
             <div class="benefits-content">
                 <div>
-                    <h2 class="section-title">¿Por qué elegir Tire Track 360?</h2>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">¿Por qué elegir TireTrack
+                        Pro?</h2>
                     <ul class="benefits-list">
                         <li>
                             <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
@@ -619,7 +620,7 @@
                         <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">+500</h3>
                         <p style="font-size: 1.2rem; margin-bottom: 30px;">Empresas confían en nosotros</p>
 
-                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">$2.3M</h3>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">S/2.3M</h3>
                         <p style="font-size: 1.2rem; margin-bottom: 30px;">Ahorrados por nuestros clientes</p>
 
                         <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #fbbf24;">98%</h3>
@@ -640,7 +641,7 @@
             <div class="pricing-cards">
                 <div class="pricing-card">
                     <h3>Starter</h3>
-                    <div class="price">$299<span class="price-period">/mes</span></div>
+                    <div class="price">S/299<span class="price-period">/mes</span></div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
                         <li style="margin: 10px 0;"><i class="fas fa-check"
                                 style="color: #10b981; margin-right: 10px;"></i>Hasta 5 equipos</li>
@@ -657,7 +658,7 @@
 
                 <div class="pricing-card featured">
                     <h3>Professional</h3>
-                    <div class="price">$599<span class="price-period">/mes</span></div>
+                    <div class="price">S/599<span class="price-period">/mes</span></div>
                     <ul style="list-style: none; padding: 0; margin: 30px 0;">
                         <li style="margin: 10px 0;"><i class="fas fa-check"
                                 style="color: #10b981; margin-right: 10px;"></i>Hasta 25 equipos</li>
@@ -705,30 +706,31 @@
                 por qué somos líderes en gestión de neumáticos</p>
 
             <div class="contact-form">
-                <form id="demoForm" onsubmit="return false;">
+                <form>
                     <div class="form-group">
-                        <label for="name">Nombre Completo *</label>
+                        <label for="name">Nombre Completo</label>
                         <input type="text" id="name" name="name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="company">Empresa *</label>
+                        <label for="company">Empresa</label>
                         <input type="text" id="company" name="company" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Corporativo *</label>
+                        <label for="email">Email Corporativo</label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Teléfono *</label>
+                        <label for="phone">Teléfono</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
 
                     <div class="form-group">
                         <label for="fleet">Tamaño de Flota</label>
-                        <input type="text" id="fleet" name="fleet" placeholder="Ej: 15 camiones, 60 neumáticos">
+                        <input type="text" id="fleet" name="fleet" placeholder="Ej: 15 camiones, 60 neumáticos"
+                            required>
                     </div>
 
                     <div class="form-group">
@@ -737,39 +739,17 @@
                             placeholder="Cuéntanos sobre tu operación actual..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" id="submitBtn"
+                    <button type="submit" class="btn btn-primary"
                         style="width: 100%; justify-content: center; font-size: 1.2rem; padding: 20px;">
                         <i class="fas fa-rocket"></i>
-                        Solicitar Demo Personalizado
+                        Iniciar Prueba Gratuita de 30 Días
                     </button>
                 </form>
 
                 <div style="margin-top: 30px; text-align: center;">
-                    <p style="opacity: 0.9; font-size: 1.1rem; margin-bottom: 20px;">
-                        <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.3rem; margin-right: 10px;"></i>
-                        <strong>Contacto directo WhatsApp:</strong>
-                    </p>
-                    <div
-                        style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
-                        <a href="https://wa.me/51970881946" target="_blank"
-                            style="color: white; text-decoration: none; background: rgba(37, 211, 102, 0.2); padding: 10px 20px; border-radius: 25px; border: 2px solid #25D366; transition: all 0.3s ease;"
-                            onmouseover="this.style.background='#25D366'"
-                            onmouseout="this.style.background='rgba(37, 211, 102, 0.2)'">
-                            <i class="fab fa-whatsapp"></i> +51 970 881 946
-                        </a>
-                        <a href="https://wa.me/51978504847" target="_blank"
-                            style="color: white; text-decoration: none; background: rgba(37, 211, 102, 0.2); padding: 10px 20px; border-radius: 25px; border: 2px solid #25D366; transition: all 0.3s ease;"
-                            onmouseover="this.style.background='#25D366'"
-                            onmouseout="this.style.background='rgba(37, 211, 102, 0.2)'">
-                            <i class="fab fa-whatsapp"></i> +51 978 504 847
-                        </a>
-                    </div>
-                    <p style="opacity: 0.8; margin-bottom: 10px;">
-                        <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>
-                        <strong>Oficina:</strong> Av. Pedro Ruiz 959, 2do Piso
-                    </p>
-                    <p style="opacity: 0.8;">🔒 Tus datos están seguros | 📞 Demo personalizada incluida | ✅ Sin
-                        compromisos</p>
+                    <p style="opacity: 0.8;">🔒 Tus datos están seguros con nosotros</p>
+                    <p style="opacity: 0.8;">📞 Llamada de demostración incluida</p>
+                    <p style="opacity: 0.8;">✅ Sin compromisos, cancela cuando quieras</p>
                 </div>
             </div>
         </div>
@@ -786,331 +766,13 @@
         });
     });
 
-    // Wait for DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM loaded, setting up form handler');
-
-        // Form submission with AJAX - FIXED VERSION
-        const form = document.getElementById('demoForm');
-        if (form) {
-            console.log('Form found, adding event listener');
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent normal form submission
-                e.stopPropagation(); // Stop event bubbling
-
-                console.log('Form submission intercepted successfully'); // Debug log
-
-                const formData = new FormData(this);
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-
-                // Show loading state
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando solicitud...';
-                submitBtn.disabled = true;
-
-                // Make AJAX request
-                fetch('process_demo.php', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'X-Requested-With': 'XMLHttpRequest'
-                        }
-                    })
-                    .then(response => {
-                        console.log('Response received:', response); // Debug log
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        return response.text(); // Get as text first
-                    })
-                    .then(text => {
-                        console.log('Raw response:', text); // Debug log
-                        try {
-                            const data = JSON.parse(text);
-                            console.log('Data parsed:', data); // Debug log
-
-                            if (data.success) {
-                                // Show success state
-                                submitBtn.innerHTML =
-                                    '<i class="fas fa-check"></i> ¡Solicitud Enviada!';
-                                submitBtn.style.background =
-                                    'linear-gradient(45deg, #10b981, #059669)';
-
-                                // Create and show success modal
-                                showSuccessModal(data);
-
-                            } else {
-                                throw new Error(data.message || 'Error al enviar la solicitud');
-                            }
-                        } catch (parseError) {
-                            console.error('JSON Parse Error:', parseError);
-                            console.error('Response text:', text);
-                            throw new Error('Invalid JSON response from server');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        showErrorModal();
-
-                        // Reset button after 5 seconds
-                        setTimeout(() => {
-                            submitBtn.innerHTML = originalText;
-                            submitBtn.disabled = false;
-                            submitBtn.style.background =
-                                'linear-gradient(45deg, #f59e0b, #eab308)';
-                        }, 5000);
-                    });
-
-                return false; // Ensure form doesn't submit normally
-            });
-        } else {
-            console.error('Form not found!');
-        }
+    // Form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert(
+            '¡Gracias por tu interés! Te contactaremos en las próximas 24 horas para programar tu demostración personalizada.'
+        );
     });
-
-    // Function to show success modal
-    function showSuccessModal(data) {
-        const priorityText = data.priority === 'urgente' ?
-            '<span style="color: #dc2626; font-weight: bold;">ALTA PRIORIDAD</span>' :
-            '<span style="color: #059669; font-weight: bold;">PRIORIDAD ALTA</span>';
-
-        const estimatedValue = data.estimated_value ?
-            `<p style="color: #059669; font-weight: bold; font-size: 1.1rem;">💰 Valor estimado: ${data.estimated_value} USD/mes</p>` :
-            '';
-
-        const successModal = document.createElement('div');
-        successModal.id = 'successModal';
-        successModal.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            animation: fadeIn 0.3s ease;
-        `;
-
-        successModal.innerHTML = `
-            <div style="
-                background: white;
-                padding: 40px;
-                border-radius: 20px;
-                max-width: 500px;
-                width: 90%;
-                text-align: center;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-                animation: slideIn 0.4s ease;
-                max-height: 90vh;
-                overflow-y: auto;
-            ">
-                <div style="font-size: 4rem; margin-bottom: 20px;">🎉</div>
-                <h2 style="color: #1e293b; margin-bottom: 15px; font-size: 1.8rem;">
-                    ¡Solicitud Enviada Exitosamente!
-                </h2>
-                <div style="background: #ecfdf5; padding: 20px; border-radius: 12px; margin: 20px 0; border-left: 4px solid #10b981;">
-                    <h3 style="color: #065f46; margin: 0 0 10px 0;">
-                        📋 Solicitud ID: #${data.request_id}
-                    </h3>
-                    <p style="margin: 5px 0; color: #065f46;">
-                        📅 Fecha: ${new Date(data.timestamp).toLocaleString('es-PE')}
-                    </p>
-                    <p style="margin: 5px 0; color: #065f46;">
-                        ⚡ Estado: ${priorityText}
-                    </p>
-                    ${estimatedValue}
-                </div>
-                
-                <div style="background: #eff6ff; padding: 20px; border-radius: 12px; margin: 20px 0; border-left: 4px solid #3b82f6;">
-                    <h4 style="color: #1e40af; margin: 0 0 15px 0;">📧 Confirmaciones Enviadas:</h4>
-                    <p style="margin: 5px 0; color: #1e40af;">
-                        ✅ Email de confirmación enviado a tu correo
-                    </p>
-                    <p style="margin: 5px 0; color: #1e40af;">
-                        🚨 Alerta enviada al equipo de ventas
-                    </p>
-                </div>
-                
-                <div style="background: #fef3c7; padding: 20px; border-radius: 12px; margin: 20px 0; border-left: 4px solid #f59e0b;">
-                    <h4 style="color: #92400e; margin: 0 0 10px 0;">⏰ Próximos Pasos:</h4>
-                    <p style="margin: 5px 0; color: #92400e; font-weight: 500;">
-                        Te contactaremos en las próximas 2 horas
-                    </p>
-                    <p style="margin: 10px 0 0 0;">
-                        <a href="https://wa.me/51970881946?text=Hola, solicité demo de Tire Track 360 (ID: ${data.request_id})" 
-                           style="color: #25D366; text-decoration: none; font-weight: bold;">
-                            📱 WhatsApp: +51 970 881 946
-                        </a> | 
-                        <a href="https://wa.me/51978504847?text=Hola, solicité demo de Tire Track 360 (ID: ${data.request_id})" 
-                           style="color: #25D366; text-decoration: none; font-weight: bold;">
-                            📱 +51 978 504 847
-                        </a>
-                    </p>
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <p style="color: #64748b; margin-bottom: 20px;">
-                        Serás redirigido automáticamente al sistema en <span id="countdown">5</span> segundos...
-                    </p>
-                    <button onclick="redirectToSystem()" style="
-                        background: linear-gradient(45deg, #1e3a8a, #3b82f6);
-                        color: white;
-                        border: none;
-                        padding: 15px 30px;
-                        border-radius: 50px;
-                        font-size: 1.1rem;
-                        font-weight: 600;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        margin: 0 10px;
-                    " onmouseover="this.style.transform='translateY(-2px)'" 
-                       onmouseout="this.style.transform='translateY(0)'">
-                        🚀 Ir al Sistema Ahora
-                    </button>
-                    <button onclick="closeModal()" style="
-                        background: rgba(107, 114, 128, 0.1);
-                        color: #374151;
-                        border: 2px solid #d1d5db;
-                        padding: 15px 30px;
-                        border-radius: 50px;
-                        font-size: 1.1rem;
-                        font-weight: 600;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        margin: 0 10px;
-                    " onmouseover="this.style.background='rgba(107, 114, 128, 0.2)'" 
-                       onmouseout="this.style.background='rgba(107, 114, 128, 0.1)'">
-                        Cerrar
-                    </button>
-                </div>
-            </div>
-        `;
-
-        // Add CSS animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            @keyframes slideIn {
-                from { 
-                    opacity: 0; 
-                    transform: translateY(-50px) scale(0.9); 
-                }
-                to { 
-                    opacity: 1; 
-                    transform: translateY(0) scale(1); 
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        document.body.appendChild(successModal);
-
-        // Countdown timer
-        let countdown = 5;
-        const countdownElement = document.getElementById('countdown');
-        const countdownTimer = setInterval(() => {
-            countdown--;
-            if (countdownElement) {
-                countdownElement.textContent = countdown;
-            }
-            if (countdown <= 0) {
-                clearInterval(countdownTimer);
-                redirectToSystem();
-            }
-        }, 1000);
-    }
-
-    // Function to show error modal
-    function showErrorModal() {
-        const errorModal = document.createElement('div');
-        errorModal.id = 'errorModal';
-        errorModal.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-        `;
-
-        errorModal.innerHTML = `
-            <div style="
-                background: white;
-                padding: 40px;
-                border-radius: 20px;
-                max-width: 400px;
-                width: 90%;
-                text-align: center;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            ">
-                <div style="font-size: 3rem; margin-bottom: 20px;">⚠️</div>
-                <h2 style="color: #dc2626; margin-bottom: 15px;">Error al Enviar</h2>
-                <p style="color: #6b7280; margin-bottom: 25px;">
-                    Hubo un problema al enviar tu solicitud. Por favor intenta nuevamente o contactanos directamente.
-                </p>
-                <div style="margin: 20px 0;">
-                    <a href="https://wa.me/51970881946?text=Hola, tuve problemas enviando la solicitud de demo de Tire Track 360" 
-                       style="color: #25D366; text-decoration: none; font-weight: bold; display: block; margin: 5px 0;">
-                        📱 WhatsApp: +51 970 881 946
-                    </a>
-                    <a href="https://wa.me/51978504847?text=Hola, tuve problemas enviando la solicitud de demo de Tire Track 360" 
-                       style="color: #25D366; text-decoration: none; font-weight: bold; display: block; margin: 5px 0;">
-                        📱 WhatsApp: +51 978 504 847
-                    </a>
-                </div>
-                <button onclick="closeErrorModal()" style="
-                    background: #ef4444;
-                    color: white;
-                    border: none;
-                    padding: 12px 24px;
-                    border-radius: 6px;
-                    cursor: pointer;
-                    font-weight: 600;
-                    margin-top: 15px;
-                ">
-                    Cerrar e Intentar Nuevamente
-                </button>
-            </div>
-        `;
-
-        document.body.appendChild(errorModal);
-    }
-
-    // Global functions for modal buttons
-    window.redirectToSystem = function() {
-        window.location.href = 'https://tiretrack360.com/sistema/';
-    };
-
-    window.closeModal = function() {
-        const modal = document.getElementById('successModal');
-        if (modal) {
-            document.body.removeChild(modal);
-            // Reset form
-            document.getElementById('demoForm').reset();
-            const submitBtn = document.querySelector('#demoForm button[type="submit"]');
-            submitBtn.innerHTML = '<i class="fas fa-rocket"></i> Solicitar Demo Personalizado';
-            submitBtn.disabled = false;
-            submitBtn.style.background = 'linear-gradient(45deg, #f59e0b, #eab308)';
-        }
-    };
-
-    window.closeErrorModal = function() {
-        const modal = document.getElementById('errorModal');
-        if (modal) {
-            document.body.removeChild(modal);
-        }
-    };
 
     // Add scroll animations
     const observerOptions = {
@@ -1148,43 +810,38 @@
         let current = 0;
         const increment = target / 100;
         const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            const text = element.textContent;
-            if (text.includes('%')) {
-                element.textContent = Math.floor(current) + '%';
-            } else if (text.includes('K')) {
-                element.textContent = Math.floor(current) + 'K';
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 20);
-    }
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' :
+                        element.textContent.includes(') ? '
+                            K ' : '
+                            ');
+                        }, 20);
+                }
 
-
-    // Trigger counter animation when stats come into view
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const statNumbers = entry.target.querySelectorAll('.stat-number');
-                statNumbers.forEach((stat, index) => {
-                    const targets = [89, 24, 47, 96];
-                    setTimeout(() => {
-                        animateCounter(stat, targets[index]);
-                    }, index * 200);
+                // Trigger counter animation when stats come into view
+                const statsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const statNumbers = entry.target.querySelectorAll('.stat-number');
+                            statNumbers.forEach((stat, index) => {
+                                const targets = [89, 24, 47, 96];
+                                setTimeout(() => {
+                                    animateCounter(stat, targets[index]);
+                                }, index * 200);
+                            });
+                            statsObserver.unobserve(entry.target);
+                        }
+                    });
                 });
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    });
 
-    const dashboardPreview = document.querySelector('.dashboard-preview');
-    if (dashboardPreview) {
-        statsObserver.observe(dashboardPreview);
-    }
+                const dashboardPreview = document.querySelector('.dashboard-preview');
+                if (dashboardPreview) {
+                    statsObserver.observe(dashboardPreview);
+                }
     </script>
 </body>
 

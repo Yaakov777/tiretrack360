@@ -1,0 +1,8 @@
+[29-Jul-2025 04:31:51 America/Lima] PHP Warning:  mail(): Failed to connect to mailserver at &quot;tiretrack360.com&quot; port 465, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:31:51 America/Lima] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:33:35 America/Lima] PHP Warning:  mail(): Failed to connect to mailserver at &quot;tiretrack360.com&quot; port 465, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:33:35 America/Lima] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:50:15 America/Lima] PHP Warning:  mail(): Failed to connect to mailserver at &quot;tiretrack360.com&quot; port 465, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:50:15 America/Lima] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:56:52 America/Lima] PHP Warning:  mail(): Failed to connect to mailserver at &quot;tiretrack360.com&quot; port 465, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63
+[29-Jul-2025 04:56:52 America/Lima] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in C:\xampp\htdocs\tiretrack360\smtp_config.php on line 63

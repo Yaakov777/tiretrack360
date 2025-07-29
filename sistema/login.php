@@ -101,8 +101,8 @@ if ($_POST) {
                 <div class="login-container">
                     <div class="login-header text-center p-4">
                         <i class="bi bi-gear-wide h1 mb-3"></i>
-                        <h3 class="mb-1">TireSystem</h3>
-                        <p class="mb-0 opacity-75">Sistema de Gestión de Neumáticos</p>
+                        <h3 class="mb-1">Tire Track 360</h3>
+                        <p class="mb-0 opacity-75">Rastreador de Neumaticos</p>
                     </div>
 
                     <div class="p-4">
@@ -152,18 +152,7 @@ if ($_POST) {
                             </div>
                         </form>
 
-                        <!-- Credenciales de demo -->
-                        <div class="demo-credentials">
-                            <h6 class="text-muted mb-2">
-                                <i class="bi bi-info-circle"></i> Credenciales de Demo:
-                            </h6>
-                            <small class="text-muted">
-                                <strong>Admin:</strong> admin@sistema.com<br>
-                                <strong>Supervisor:</strong> supervisor@sistema.com<br>
-                                <strong>Operador:</strong> operador@sistema.com<br>
-                                <strong>Contraseña:</strong> password (para todos)
-                            </small>
-                        </div>
+
                     </div>
                 </div>
 
